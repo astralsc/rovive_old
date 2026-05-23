@@ -48,7 +48,10 @@ $title = $_SESSION["user"]["username"] . " - Rovive";
                                 <?= htmlspecialchars($_SESSION["user"]["username"]) ?><button class="pull-right" style="height: 1em; opacity: 75%; font-weight:400; border: none; outline: none; background-color: Transparent" id="EditUsername">Edit</button></p>
                             <p><span style="opacity: 35%; font-weight:400">Password:</span> *********<button class="pull-right" style="height: 1em; opacity: 75%; font-weight:400; border: none; outline: none; background-color: Transparent" id="EditPassword">Edit</button></p>
                             <p><span style="opacity: 35%; font-weight:400">Email Address:</span>
-                                <?= $_SESSION["user"]["email"] ? htmlspecialchars($_SESSION["user"]["email"]) : "N/A" ?><button class="pull-right" style="height: 1em; opacity: 75%; font-weight:400; border: none; outline: none; background-color: Transparent" id="EditEmail">Edit</button></p>
+                                <?= isset($_SESSION["user"]["email"]) 
+                                ? htmlspecialchars($_SESSION["user"]["email"]) 
+                                : "N/A" ?>
+                                <button class="pull-right" style="height: 1em; opacity: 75%; font-weight:400; border: none; outline: none; background-color: Transparent" id="EditEmail">Edit</button></p>
                         </div>
                     </div>
                     <div class="section profile-about" ng-controller="profileUtilitiesController">
