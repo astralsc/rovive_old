@@ -3,7 +3,7 @@
 class PageBuilder
 {
 
-    public static array $pageConfig =
+    public static $pageConfig =
     [
         "title" => "a",
         "og:site_name" => SITE_CONFIG["site"]["name"],

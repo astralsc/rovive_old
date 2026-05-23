@@ -16,7 +16,7 @@ if (!isset($_SESSION["passcode"])) {
 
 // variables
 
-$maintenance = true;
+$maintenance = false;
 
 $maintenanceKey = "doyousuckdicks?yesyesyes!";
 
