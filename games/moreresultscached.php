@@ -49,7 +49,9 @@ function getCreatorName($id) {
         $creator_name = substr($creator_name, 0, 30) . '...';
     }
 
-    $thumb = $game["icon"] == "" ? "/img/DefaultPlaceIcon.jpg" : $game["icon"];
+    $thumb = (!empty($game["icon"]))
+        ? $game["icon"]
+        : "/img/DefaultPlaceIcon.jpg";
 
     $playerAmount = (int)$jobClass->getPlayerAmountForPlaceId($game["id"]);
 ?>
